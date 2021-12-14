@@ -44,7 +44,7 @@ After you have copied the link, enter the command below in your terminal
 
 
 
-[Here](https://lucas-masaba.github.io/to_do_list/dist) is a link to the online view of my website
+[Here](https://lucas-masaba.github.io/leaderboard/dist) is a link to the online view of my website
 
 
 
