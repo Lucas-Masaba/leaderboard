@@ -1,27 +1,31 @@
 body {
   font-family: 'Courier New', Courier, monospace;
 }
+
 .main_tag {
   display: flex;
   justify-content: space-around;
-  
 }
+
 .recent_scores_head {
   font-weight: bold;
   font-size: 150%;
 }
+
 form {
   display: flex;
   flex-direction: column;
 }
+
 input {
   margin-top: 7%;
   margin-bottom: 7%;
+  border: black 1px solid;
+  padding: 2%;
 }
 
 .add_head {
   font-size: 150%;
-
 }
 
 .refresh_button {
@@ -31,4 +35,15 @@ input {
 button {
   background: none;
   box-shadow: 2px 2px 2px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.leaderboard_ul {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 2%;
+  border: solid black 1px;
 }

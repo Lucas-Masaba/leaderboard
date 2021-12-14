@@ -1,13 +1,7 @@
-import _ from 'lodash';
 import './style.css';
+import UI from './modules/ui.js';
 
-function component() {
-  const element = document.createElement('div');
+const { listItems } = UI;
+const ul = document.getElementById('leaderboard_ul_id');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
+ul.innerHTML = `${listItems}`;
