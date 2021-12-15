@@ -1,7 +1,8 @@
 import './style.css';
-import UI from './modules/ui.js';
+/*import API from './modules/api.js';
 
-const { listItems } = UI;
+const { listItems } = API;
 const ul = document.getElementById('leaderboard_ul_id');
 
 ul.innerHTML = `${listItems}`;
+*/
