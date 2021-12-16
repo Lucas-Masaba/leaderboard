@@ -1,31 +1,32 @@
-/*const postData = async (url = "", data = {}) => {
-  const response = await fetch(url, {
-    method: "POST",
+const UL = document.getElementById('leaderboard_ul_id')
+const gameId = 'SteZ9YnoWtfCLJ2KnA6J'
+const submitScore = async (userName, userScore) => {
+  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`, {
+    method: 'POST',
+    body: JSON.stringify({
+      user: userName,
+      score: userScore,
+    }),
     headers: {
-      "Content-Type": "application/json; charset=UTF-8",
-    },
-    body: JSON.stringify(data),
-  });
-  return response.json();
+      'Content-type': 'application/json; charset=UTF-8',
+    }
+  })
+    const result = await response.json();
+    return result
+}
+const fetchDataFromAPI = async () => {
+  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`);
+  const getResult = await response.json();
+  const resultArray = getResult.result;
+  const values = resultArray.map((result) => `<li class="display-table-list">
+                      <p>${result.user}: ${result.score}</p>
+                  </li>`).join('');
+  UL.innerHTML = values;
 };
+const resetScoreBoard = (array) => {
+  if(array.length > 5) {
+    
+  }
+}
 
-//postData('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2/scores/', { user: 'John Doe', score:'42' })
- // .then(data => {
- //   console.log(data); 
- // });
-
-const createGame = () => {
-  postData(
-    "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/",
-    { name: "New game" }
-  ).then(data => localStorage.setItem("data", JSON.stringify(data)));
-};
-
-const postScore = (nameInput, numberInput) => {
-  postData(
-    "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/SteZ9YnoWtfCLJ2KnA6J/scores/",
-    { user: nameInput, score: numberInput }
-  ).then(data => localStorage.setItem('data', JSON.stringify(data)))
-    console.log()
-};
-export default { createGame, postScore }*/
+export default { submitScore, fetchDataFromAPI}
