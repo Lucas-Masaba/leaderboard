@@ -116,7 +116,17 @@ eval("\r\n\r\n/* istanbul ignore next  */\r\nfunction styleTagTransform(css, sty
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n/*import API from './modules/api.js';\r\n\r\nconst { listItems } = API;\r\nconst ul = document.getElementById('leaderboard_ul_id');\r\n\r\nul.innerHTML = `${listItems}`;\r\n*/\r\n\n\n//# sourceURL=webpack://webpack_project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/api.js */ \"./src/modules/api.js\");\n\n\n\nconst { submitScore, fetchDataFromAPI } = _modules_api_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\n\nconst nameInput = document.getElementById('name_input');\nconst scoreInput = document.getElementById('score_input');\n\nconst refreshButton = document.getElementById('refresh_button');\nconst submitButton = document.getElementById('submit_button');\n\nsubmitButton.addEventListener('click', async (e) => {\n  e.preventDefault();\n  await submitScore(nameInput.value, scoreInput.value);\n  nameInput.value = '';\n  scoreInput.value = '';\n});\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  fetchDataFromAPI();\n  refreshButton.addEventListener('click', async () => {\n    fetchDataFromAPI();\n  });\n});\n\n\n//# sourceURL=webpack://webpack_project/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/api.js":
+/*!****************************!*\
+  !*** ./src/modules/api.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst UL = document.getElementById('leaderboard_ul_id');\nconst gameId = 'SteZ4YnoWtfCLJ2KnA6J';\n\nconst submitScore = async (userName, userScore) => {\n  const response = await fetch(\n    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`,\n    {\n      method: 'POST',\n      body: JSON.stringify({\n        user: userName,\n        score: userScore,\n      }),\n      headers: {\n        'Content-type': 'application/json; charset=UTF-8',\n      },\n    },\n  );\n  const result = await response.json();\n  return result;\n};\nconst fetchDataFromAPI = async () => {\n  const response = await fetch(\n    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores`,\n  );\n  const getResult = await response.json();\n  const resultArray = getResult.result;\n  const values = resultArray\n    .map(\n      (result) => `<li class=\"score_item\">\n                      <p>${result.user}: ${result.score}</p>\n                  </li>`,\n    )\n    .join('');\n  UL.innerHTML = values;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({ submitScore, fetchDataFromAPI });\n\n\n//# sourceURL=webpack://webpack_project/./src/modules/api.js?");
 
 /***/ })
 
