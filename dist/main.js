@@ -116,17 +116,7 @@ eval("\r\n\r\n/* istanbul ignore next  */\r\nfunction styleTagTransform(css, sty
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/api.js */ \"./src/modules/api.js\");\n\r\n\r\n\r\nconst { listItems } = _modules_api_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\r\nconst ul = document.getElementById('leaderboard_ul_id');\r\n\r\nul.innerHTML = `${listItems}`;\r\n\n\n//# sourceURL=webpack://webpack_project/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/modules/api.js":
-/*!****************************!*\
-  !*** ./src/modules/api.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ API)\n/* harmony export */ });\nclass API {\r\n  static get listItems() {\r\n    return `<li class=\"list_item\">\r\n                <p>Name: 100</p>\r\n            </li>\r\n            <li class=\"list_item\">\r\n                <p>Name: 50</p>\r\n            </li>\r\n            <li class=\"list_item\">\r\n                <p>Name: 60</p>\r\n            </li>`;\r\n  }\r\n}\n\n//# sourceURL=webpack://webpack_project/./src/modules/api.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n/*import API from './modules/api.js';\r\n\r\nconst { listItems } = API;\r\nconst ul = document.getElementById('leaderboard_ul_id');\r\n\r\nul.innerHTML = `${listItems}`;\r\n*/\r\n\n\n//# sourceURL=webpack://webpack_project/./src/index.js?");
 
 /***/ })
 
