@@ -2,7 +2,8 @@
 
 > Leaderboard
 
-
+![screenshot](/screenshot.png)
+ 
 ## Built With
 
 - Javascript
