@@ -2,6 +2,12 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.leaderboard_heading {
+  padding-left: 2%;
+  background: rgb(255, 121, 73);
+  color: #ffffff;
+}
+
 .main_tag {
   display: flex;
   justify-content: space-around;
@@ -21,7 +27,8 @@ input {
   margin-top: 7%;
   margin-bottom: 7%;
   border: black 1px solid;
-  padding: 2%;
+  padding: 7%;
+  font-size: 120%
 }
 
 .add_head {
@@ -33,17 +40,65 @@ input {
 }
 
 button {
-  background: none;
+  background: rgb(255, 121, 73);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 103%;
   box-shadow: 2px 2px 2px;
+  
+}
+.button_p {
+  text-align: right;
+}
+
+#submit_button {
+  width: 50%;
 }
 
 button:hover {
   cursor: pointer;
 }
 
+
+
 .leaderboard_ul {
   list-style-type: none;
   padding: 0;
-  padding-left: 2%;
-  border: solid black 1px;
+  border: solid black 0.1px;
+}
+
+.gray {
+  background: rgb(255, 121, 73);
+  padding: 1%;
+  color: #ffffff;
+}
+
+.whiteSmoke {
+  background: #ffffff;
+  padding: 1%;
+}
+.score_item p{
+  font-weight: bold;
+  font-size: 105%;
+}
+
+@media (max-width: 768px) and (max-width: 1100px) {
+  .main_tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .leaderboard_heading {
+    text-align: center;
+    background: rgb(255, 121, 73);
+    color: #ffffff;
+  }
+}
+@media (min-width: 481px) and (min-width: 768px){
+  .score_container {
+    margin-left: 10%;
+  }
+  .form_container {
+    margin-right: 10%;
+  }
 }
