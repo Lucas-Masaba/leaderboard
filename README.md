@@ -1,9 +1,11 @@
-# Leadderboard
+# Leaderboard
 
 > Leaderboard
 
+### Here is a desktop and mobile preview
 ![screenshot](/screenshot.png)
- 
+
+![screenshot](/screenshot2.png)
 ## Built With
 
 - Javascript
