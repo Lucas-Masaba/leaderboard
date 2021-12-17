@@ -12,6 +12,9 @@
 - HTML/CSS
 - Web-Pack
 
+## Want To See It Online
+[Here](https://lucas-masaba.github.io/leaderboard/dist) is a link to the online view of my website
+
 ## Getting Started
 
 
@@ -44,10 +47,6 @@ After you have copied the link, enter the command below in your terminal
 - GitHub: [@githubhandle](https://github.com/Lucas-Masaba)
 - Twitter: [@twitterhandle](https://twitter.com/MasabaLuke)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/khusiima-luke-masaba-59060a121)
-
-
-
-[Here](https://lucas-masaba.github.io/leaderboard/dist) is a link to the online view of my website
 
 
 

@@ -32,7 +32,7 @@ const fetchDataFromAPI = async () => {
     )
     .join('');
   UL.innerHTML = values;
-  const scoreList = [...document.querySelectorAll('li')];
+  const scoreList = document.querySelectorAll('li');
 
   scoreList.forEach((item, index) => {
     if (index % 2 === 0) {
