@@ -1,3 +1,5 @@
+import colorTiles from "./ui.js";
+
 const UL = document.getElementById('leaderboard_ul_id');
 const gameId = 'SteZ4YnoWtfCLJ2KnA6J';
 
@@ -33,14 +35,10 @@ const fetchDataFromAPI = async () => {
     .join('');
   UL.innerHTML = values;
   const scoreList = document.querySelectorAll('li');
-
-  scoreList.forEach((item, index) => {
-    if (index % 2 === 0) {
-      item.classList.add('gray');
-    } else {
-      item.classList.add('whiteSmoke');
-    }
-  });
+ 
+  colorTiles(scoreList)
 };
+
+
 
 export default { submitScore, fetchDataFromAPI };
